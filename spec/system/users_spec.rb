@@ -38,7 +38,7 @@ describe 'User', type: :system do
       end
 
       context 'nicknameが20文字を超える場合' do
-        let(:nickname) { 'あいうえおかきくけこさしすせそたちつてとな' } # 21文字
+        let(:nickname) { 'あ' * 21 }
         it 'ユーザーを作成せず、エラーメッセージを表示する' do
           expect { subject }.not_to change(User, :count)
           expect(page).to have_content('Nickname is too long (maximum is 20 character')
@@ -78,7 +78,7 @@ describe 'User', type: :system do
       end
 
       context 'passwordとpassword_confirmationが一致しない場合' do
-        let(:password_confirmation) { "#{password}hoge" } # passwordに"hoge"という文字列を足した文字列にする
+        let(:password_confirmation) { "#{password}hoge" } # passwordに"hoge"を足した文字列にする
         it 'ユーザーを作成せず、エラーメッセージを表示する' do
           expect { subject }.not_to change(User, :count)
           expect(page).to have_content("Password confirmation doesn't match Password")
