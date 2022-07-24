@@ -11,7 +11,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="h-screen bg-blue-50">
+    <%= render 'partial/flash' %>
     <main class="container mx-auto mt-20 py-8 px-5 flex items-center justify-center">
       <%= yield %>
     </main>
