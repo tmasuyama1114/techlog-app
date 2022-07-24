@@ -24,6 +24,7 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
+    - Guardfile
 
 # Assignment: 変数への代入
 # Branch: メソッド呼び出し
