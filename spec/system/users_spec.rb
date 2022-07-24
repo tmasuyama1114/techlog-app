@@ -18,7 +18,7 @@ describe 'User', type: :system do
       fill_in 'user_email', with: email
       fill_in 'user_password', with: password
       fill_in 'user_password_confirmation', with: password_confirmation
-      click_on '新規登録'
+      click_button 'ユーザー登録'
     end
 
     context '正常系' do
@@ -94,7 +94,7 @@ describe 'User', type: :system do
       visit '/users/sign_in'
       fill_in 'user_email', with: email
       fill_in 'user_password', with: 'password'
-      click_on 'ログイン'
+      click_button 'ログイン'
     end
 
     context '正常系' do
