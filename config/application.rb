@@ -18,6 +18,6 @@ module Saigen
         routing_specs: false # routes.rb用のスペックファイル作成しない
     end
 
-    # config.i18n.default_locale = :ja
+    config.i18n.default_locale = :ja
   end
 end
