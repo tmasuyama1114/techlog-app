@@ -18,12 +18,25 @@ ja:
               invalid: "は有効でありません。"
             password_confirmation:
               confirmation: "が一致していません。"
+        post:
+          attributes:
+            title:
+              blank: "が入力されていません。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+            content:
+              blank: "が入力されていません。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+            user:
+              required: "が入力されていません。"
     attributes:
       user:
         nickname: "ニックネーム"
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "確認用パスワード"
+      # post:
+      #   title: "タイトル"
+      #   content: "本文"
     models:
       user: "ユーザー"
   errors:
