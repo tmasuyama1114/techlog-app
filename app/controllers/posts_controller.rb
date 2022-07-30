@@ -13,7 +13,7 @@ class PostsController < ApplicationController
       redirect_to root_path # 一時的にトップページへリダイレクト(要修正)
     else
       flash[:alert] = '投稿に失敗しました'
-      render new_post_path
+      render :new
     end
   end
 
