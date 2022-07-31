@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show, :index]
 
   def new
     @post = Post.new
@@ -19,6 +19,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+  end
+
+  def index
+    @posts = Post.limit(10).order(created_at: :desc)
   end
 
   private
