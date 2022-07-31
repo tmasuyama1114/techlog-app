@@ -42,6 +42,7 @@ ja:
   errors:
     messages:
       not_saved: "エラーが発生したため%{resource}は保存されませんでした。"
+      record_invalid: "不正なデータです。"
 
   devise:
     failure:
