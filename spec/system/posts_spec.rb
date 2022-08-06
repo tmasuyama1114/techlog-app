@@ -40,7 +40,7 @@ describe 'Post', type: :system do
       context 'パラメータが正常な場合' do
         it 'Postを作成できる' do
           expect { subject }.to change(Post, :count).by(1)
-          expect(current_path).to eq('/')
+          expect(current_path).to eq('/posts')
           expect(page).to have_content('投稿しました')
         end
       end
