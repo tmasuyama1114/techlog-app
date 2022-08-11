@@ -49,17 +49,17 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 
-  describe 'GET /posts' do
+  describe 'GET /' do
     context 'ログインしていない場合' do
       it 'HTTPステータス200を返す' do
-        get '/posts'
+        get '/'
         expect(response).to have_http_status '200'
       end
     end
     context 'ログインしている場合' do
       it 'HTTPステータス200を返す' do
         sign_in @user
-        get '/posts'
+        get '/'
         expect(response).to have_http_status '200'
       end
     end
