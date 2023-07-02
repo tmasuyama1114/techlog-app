@@ -1,24 +1,49 @@
-# README
+## インストール方法
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ruby インストール（必要に応じ）
 
-Things you may want to cover:
+```bash
+brew upgrade rbenv ruby-build
+rbenv install 3.0.4
+```
 
-* Ruby version
+### Bundler インストール（必要に応じ）
 
-* System dependencies
+```bash
+gem install bundler -v "2.3.15"
+```
 
-* Configuration
+### Gem のインストール
 
-* Database creation
+```
+bundle config set path '.bundle'
+bundle install
+```
 
-* Database initialization
+### データベースの作成
 
-* How to run the test suite
+```
+bin/rails db:create
+bin/rails db:migrate
+bin/rails db:migrate RAILS_ENV=test
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## 起動方法
 
-* Deployment instructions
+```
+bin/rails s
+```
 
-* ...
+その後、ブラウザで http://localhost:3000/ にアクセスする。
+
+## テスト実行方法
+
+```
+bin/rspec
+```
+
+## Rubocop による静的解析
+
+```
+bundle exec rubocop
+```
