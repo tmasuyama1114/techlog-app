@@ -1,3 +1,10 @@
+## アプリの入手方法
+
+```bash
+git clone git@github.com:tmasuyama1114/techlog-app.git
+cd techlog-app
+```
+
 ## インストール方法
 
 ### Ruby インストール（必要に応じ）
@@ -30,8 +37,10 @@ bin/rails db:migrate RAILS_ENV=test
 
 ## 起動方法
 
+通常の Rails は `bin/rails s` で起動しますが、このアプリケーションは Tailwind CSS のコンパイルも行うため、`bin/dev` を使って起動します。
+
 ```
-bin/rails s
+bin/dev
 ```
 
 その後、ブラウザで http://localhost:3000/ にアクセスする。
